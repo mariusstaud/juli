@@ -3,190 +3,310 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Julian Meinhardt — The No-Ring Blueprint™</title>
-  <meta name="description" content="Stay with your partner without rushing a wedding. Frame, deals, and scripts by Julian Meinhardt. No drama. No ring. Hustlers University vibes.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>Julian Meinhardt — Stay-With-Her, Don’t-Marry-Her Coach</title>
+  <meta name="description" content="Keep the love. Skip the paperwork. Julian Meinhardt coaches men who want to stay in the relationship without proposing — ethically, decisively, hilariously.">
+  <meta property="og:title" content="Stay With Her. Don’t Marry Her.™">
+  <meta property="og:description" content="The Julian Protocol: Keep the relationship, dodge the ring.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#111827">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0b12; --fg:#f7f7fb; --muted:#b8b8c7;
-      --hi:#8a5cff; --hi2:#00ffd1; --card:#121222; --border:#23233f;
-      --max:1100px; --r:16px;
+      --bg:#0b0b12;
+      --fg:#f5f7fb;
+      --muted:#b9bed1;
+      --hi:#ff3ea5;
+      --hi2:#00e7ff;
+      --card:#121226;
+      --ok:#22c55e;
+      --warn:#f59e0b;
+      --err:#ef4444;
+      --ring:#c084fc;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{
-      background:#0b0b12;
-      color:var(--fg);
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height:1.45;
-      min-height:100%;
-    }
-    body{
-      background:
-        radial-gradient(1200px 800px at 20% 10%, #12122a 0%, #0b0b12 60%, #07070c 100%);
-    }
-    a{color:var(--hi2);text-decoration:none}
-    .wrap{max-width:var(--max);margin:0 auto;padding:28px}
-    .hero{
-      display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;
-      padding:28px;border:1px solid var(--border);border-radius:18px;
-      background:linear-gradient(135deg,rgba(138,92,255,.08),rgba(0,255,209,.05));
-    }
-    .badge{display:inline-flex;gap:8px;align-items:center;background:#17172a;border:1px solid #2b2c47;border-radius:999px;padding:6px 12px;font-size:12px;color:#e7e8f7}
-    .hero h1{font-family:Manrope,Inter,sans-serif;font-size:44px;line-height:1.06;margin:14px 0 8px}
-    .lead{color:var(--muted);font-size:18px;margin:0 0 16px}
-    .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-    .btn{border:0;border-radius:12px;padding:14px 18px;font-weight:700;cursor:pointer}
-    .btn-primary{background:linear-gradient(90deg,var(--hi),var(--hi2));color:#0b0b12}
-    .btn-ghost{background:#17172a;color:#e7e8f7;border:1px solid #2b2c47}
-    .bullets{display:grid;gap:10px;margin-top:14px}
-    .tick{display:flex;gap:10px;align-items:flex-start}
-    .tick .dot{width:9px;height:9px;border-radius:99px;background:linear-gradient(90deg,var(--hi),var(--hi2));margin-top:8px}
-    .pfp{display:grid;justify-items:center;gap:10px}
-    .pfp img{width:100%;max-width:340px;aspect-ratio:1/1;object-fit:cover;border-radius:16px;border:1px solid #2a2a45}
-    .section{margin:56px 0 24px}
-    h2{font-family:Manrope,Inter,sans-serif;font-size:34px;margin:6px 0 14px}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px}
-    .muted{color:var(--muted)}
-    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch}
-    .faq details{background:#101024;border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px}
-    .faq summary{cursor:pointer;font-weight:600}
-    .cta{border:1px solid var(--border);border-radius:16px;padding:18px;background:#101020}
-    footer{margin:56px 0 10px;color:#8d94b8;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    @media (max-width: 900px){
-      .hero,.grid-2,.cards{grid-template-columns:1fr}
-      .hero h1{font-size:34px}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 1200px at 80% -10%, rgba(0,231,255,.08), transparent 60%),radial-gradient(1200px 1200px at 10% 110%, rgba(255,62,165,.08), transparent 60%),var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+    .logo .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--hi),var(--hi2));box-shadow:0 0 20px rgba(255,62,165,.7)}
+    .pill{padding:8px 14px;border:1px solid rgba(255,255,255,.12);border-radius:999px;backdrop-filter:blur(6px)}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;margin:28px 0}
+    .h-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,.12);padding:6px 10px;border-radius:999px}
+    .hero h1{font-size:46px;line-height:1.04;margin:14px 0 10px}
+    .hero p{font-size:18px;color:#d9dcea}
+    .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px}
+    .btn{padding:14px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,rgba(255,62,165,.12),rgba(0,231,255,.08));cursor:pointer;font-weight:700}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+    .btn.primary{background:linear-gradient(135deg,var(--hi),var(--hi2));color:#0b0b12;border-color:transparent}
+    .proof{display:flex;gap:10px;align-items:center;margin-top:12px;color:var(--muted);font-size:13px}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
+    .face{width:100%;border-radius:14px;border:1px solid rgba(255,255,255,.12);box-shadow:0 12px 40px rgba(0,0,0,.35)}
+    .ribbon{display:inline-flex;gap:8px;align-items:center;background:linear-gradient(90deg,rgba(192,132,252,.25),rgba(59,130,246,.25));border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 10px;font-size:12px;color:#dfe3ff;margin-top:12px}
+    section{margin:64px 0}
+    .section-title{font-size:28px;margin:0 0 10px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .list{display:grid;gap:10px;margin:12px 0 0}
+    .list li{list-style:none;display:flex;gap:10px;align-items:flex-start}
+    .dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--hi),var(--hi2));box-shadow:0 0 16px rgba(255,62,165,.7);margin-top:7px}
+    .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#dfe3ff;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:6px 10px;background:rgba(255,255,255,.05)}
+    .cols-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .faq-item{border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))}
+    .cta-final{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:center}
+    .ticker{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .ticker .chip{font-size:12px;border:1px dashed rgba(255,255,255,.18);padding:6px 10px;border-radius:999px;color:#cfe3ff;background:rgba(0,0,0,.2)}
+    .guarantee{border:1px solid rgba(34,197,94,.55);background:linear-gradient(180deg,rgba(34,197,94,.12),rgba(34,197,94,.05));border-radius:14px;padding:14px}
+    .note{color:var(--muted);font-size:12px}
+    .testimonial{display:flex;gap:12px;align-items:flex-start}
+    .avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#333,#111);border:1px solid rgba(255,255,255,.15)}
+    .foot{margin-top:36px;padding:18px;border-top:1px solid rgba(255,255,255,.12);color:#98a1c4;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .count{font-variant-numeric:tabular-nums}
+    @media (max-width:980px){
+      .hero,.cta-final,.grid,.cols-2{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- HERO -->
-    <header class="hero" id="top">
-      <div>
-        <span class="badge">As seen at: Hustlers University · Art-of-the-Deal Book Club · Bitcoin Maxi Meetup · Sigma Sunday Circle</span>
-        <h1>“Marry Later. Love Now.” — The No-Ring Blueprint™</h1>
-        <p class="lead">Stay in the relationship <b>without</b> rushing a wedding. Build unshakeable frame, negotiate like a dealmaker, communicate with clarity. <b>No drama. No ring. No bimbo meltdowns.</b></p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#cta">Book your No-Ring Call</a>
-          <a class="btn btn-ghost" href="#free">Download the free Mini Script</a>
-        </div>
-        <div class="bullets">
-          <div class="tick"><div class="dot"></div><div><b>Frame First:</b> You set standards, not ultimatums.</div></div>
-          <div class="tick"><div class="dot"></div><div><b>Deal Energy:</b> Negotiate, don’t defend.</div></div>
-          <div class="tick"><div class="dot"></div><div><b>HODL Love:</b> Keep the bond, HODL your timeline.</div></div>
-          <div class="tick"><div class="dot"></div><div><b>Zero Drama:</b> Scripts, boundaries, peace — even if she’s one eyelash extension away from full bimbo mode.</div></div>
-        </div>
-      </div>
-      <div class="pfp">
-        <!-- IMPORTANT: host locally to avoid hotlink blocks -->
-        <img src="./assets/julian.jpg" alt="Julian Meinhardt">
-        <small class="muted">“Two pixels of social proof beat ten paragraphs of neediness.”</small>
-      </div>
-    </header>
 
-    <!-- PROBLEM + PROMISE -->
-    <section class="section grid-2" id="problem">
-      <div class="card">
-        <h2>Problem</h2>
-        <p>It’s been a year. Things are good. Suddenly: “So… when’s the wedding?” Friends post rings, family keeps asking, Insta is a parade of gold balloons and bridal-bimbo photo dumps.</p>
-        <p>You love her — but you’re not ready for the ring. Not while career, freedom, mission, grindset are compounding. Maybe you’re still taking <b>Hustlers University</b> modules at 3 AM.</p>
-        <p>Without structure you lose frame, say the wrong thing, and end up choosing between a pressure wedding or a resentful breakup. Both are Ls. There’s a third path.</p>
+    <!-- NAV -->
+    <div class="nav">
+      <div class="logo"><span class="dot"></span> JULIAN MEINHARDT</div>
+      <div class="pill">“Stay With Her. Don’t Marry Her.™”</div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div>
+        <span class="h-eyebrow">High-Agency Relationship Strategy • Not a ring simulator</span>
+        <h1>Stay With Her. <span style="background:linear-gradient(135deg,var(--hi),var(--hi2));-webkit-background-clip:text;background-clip:text;color:transparent">Don’t Marry Her.™</span></h1>
+        <p>Hi, I’m <b>Julian Meinhardt</b>. I coach men who love their girlfriend but don’t want the legal side-quests yet. Keep the intimacy, ditch the ultimatum, and lead with calm, Trump-level deal framing, Tate-tier discipline, and Bitcoin time preference. No drama. No broken hearts. No paperwork.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#cta">Book a 7-Minute “No-Ring” Call</a>
+          <a class="btn" href="#solution">See The Protocol</a>
+        </div>
+        <div class="proof">
+          <span class="badge">Built for serious men</span>
+          <span class="badge">Not affiliated with Hustlers University</span>
+          <span class="badge">100% ring-dodging clarity</span>
+        </div>
       </div>
-      <div class="card">
-        <h2>Promise</h2>
-        <p><b>The No-Ring Blueprint™</b> is a practical system to keep a <b>long-term relationship</b> while running a <b>no-wedding-yet</b> timeline — with radical honesty, calm leadership, and zero games.</p>
-        <ul class="muted" style="margin-top:10px">
-          <li><b>Frame Engineering:</b> Lead the conversation, not the deadline.</li>
-          <li><b>Deal Architecture:</b> <i>Trump-style</i> win-win: vision + milestones instead of “ring or else.”</li>
-          <li><b>Reward Loop:</b> Keep affection, security, and fun high during the no-ring phase.</li>
-        </ul>
+      <div class="hero-card">
+        <img class="face" alt="Julian Meinhardt" src="https://media.licdn.com/dms/image/v2/D4E03AQFaLQ2ig09qFQ/profile-displayphoto-shrink_200_200/B4EZSz9eg2HoAc-/0/1738186025385?e=1757548800&v=beta&t=dxskjWRPEHOe6yTOGpVIe-Zr446Tui_1DJ_ZEcZ7jXM">
+        <div class="ribbon">“If she’s the one, time will prove it. If not, rings won’t fix it.” — JM</div>
+        <div class="ticker">
+          <span class="chip">Negotiation > Obligation</span>
+          <span class="chip">Future pacing > Pressure</span>
+          <span class="chip">Signals > Speeches</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section id="problem">
+      <h2 class="section-title">The Problem Nobody Sells You</h2>
+      <p class="note">You love her. She’s wonderful. But she wants the ring <i>yesterday</i>. You want to move like a disciplined investor, not a panic buyer.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Ultimatums & Timelines</h3>
+          <ul class="list">
+            <li><span class="dot"></span><span>“My parents asked again.” / “My friends are all engaged.” / “Are you serious or not?”</span></li>
+            <li><span class="dot"></span><span>Convo loops that end in tears and silence.</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Bad Negotiation Framing</h3>
+          <ul class="list">
+            <li><span class="dot"></span><span>You answer feelings with data. She answers data with feelings. Nobody feels heard.</span></li>
+            <li><span class="dot"></span><span>You think “compromise.” She hears “stalling.”</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Time Preference Clash</h3>
+          <ul class="list">
+            <li><span class="dot"></span><span>You’re on Bitcoin time (low time preference). She’s on wedding-Pinterest time (high time preference).</span></li>
+            <li><span class="dot"></span><span>Vision mismatch & recurring fights.</span></li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- SOLUTION -->
-    <section class="section" id="solution">
-      <h2>Solution — The No-Ring Blueprint™</h2>
-      <div class="grid-2">
+    <section id="solution">
+      <h2 class="section-title">The Julian Protocol</h2>
+      <p class="note">A simple, ethical system to keep love strong while removing marriage pressure — no negging, no games, no ghosting.</p>
+      <div class="cols-2">
         <div class="card">
-          <ol>
-            <li><b>Frame Engineering</b> — your values, timing, and standards.</li>
-            <li><b>Deal Architecture</b> — win-win proposals that shift from <i>marriage</i> to <i>mutual goals</i>.</li>
-            <li><b>Reward Loop</b> — sustain affection & stability without escalating legal commitment.</li>
-          </ol>
-        </div>
-        <div class="card" id="free">
-          <h3>Core Scripts</h3>
-          <ul>
-            <li><b>The Open:</b> “I want you, I want <i>us</i> — and I want us to decide <b>smart</b>, not fast.”</li>
-            <li><b>The Reframe:</b> “Marriage isn’t love’s proof — our daily behavior is.”</li>
-            <li><b>The Deal:</b> “Let’s run a 12-month plan with clear goals — without ring pressure.”</li>
+          <h3>Step 1 — Frame</h3>
+          <p>Set the <b>Leadership Frame</b>: “I’m committed to us long-term. Rings don’t create love; our actions do. Let’s grow, then decide.” This diffuses pressure and creates safety.</p>
+          <ul class="list">
+            <li><span class="dot"></span><span><b>Trumpian deal clarity:</b> define terms, define timeline windows, define win-wins.</span></li>
+            <li><span class="dot"></span><span><b>Signal over speak:</b> weekly rituals > long speeches.</span></li>
           </ul>
-          <p class="muted" style="margin-top:8px">Includes PDF + audio cadence.</p>
+        </div>
+        <div class="card">
+          <h3>Step 2 — Future Pace</h3>
+          <p>Show the <b>Roadmap</b> (career, finance, lifestyle) so she sees marriage isn’t “never,” it’s “not yet.”</p>
+          <ul class="list">
+            <li><span class="dot"></span><span>Milestones: income targets, living plan, travel, family intros, <i>then</i> decision window.</span></li>
+            <li><span class="dot"></span><span>Calendar anchors that calm anxiety.</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Step 3 — Reward Loop</h3>
+          <p>Make the relationship feel <b>better now</b>: weekly date systems, intimacy upgrades, conflict rules.</p>
+          <ul class="list">
+            <li><span class="dot"></span><span><b>No ring pressure → more connection</b>. It’s wild how that works.</span></li>
+            <li><span class="dot"></span><span>Weekly “State of Us” 12-minute check-in. Script included.</span></li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- FEATURES -->
-    <section class="section" id="features">
-      <h2>What You Get</h2>
-      <div class="cards">
-        <div class="card"><h3>No-Ring Scripts</h3><p>Word-for-word lines for tough talks.</p></div>
-        <div class="card"><h3>Timeline Matrix</h3><p>6/12/18-month strategies with checkpoints.</p></div>
-        <div class="card"><h3>Boundary Toolkit</h3><p>Say <b>no</b> without chaos; stay warm and firm.</p></div>
-        <div class="card"><h3>Tate-ish Frame</h3><p>Dominance ≠ volume. Calm, purpose, presence.</p></div>
-        <div class="card"><h3>Bitcoin Analogies</h3><p>“We HODL <i>us</i> — not bureaucracy.”</p></div>
-        <div class="card"><h3>Crisis Playbook</h3><p>Ultimatums, family pressure, or sudden bimbo boards.</p></div>
+    <section id="features">
+      <h2 class="section-title">What You Get (Features)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Boundary Builder Kit</h3>
+          <p>Copy-paste scripts for “I love you, I’m staying, I’m not proposing now.” Calm, masculine, compassionate.</p>
+          <ul class="list">
+            <li><span class="dot"></span><span>Family pressure responses (parents, friends, group chats).</span></li>
+            <li><span class="dot"></span><span>Holiday & wedding-season defenses.</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Ring Dodge Playbook</h3>
+          <p>How to handle sudden proposals, diamond hints, venue tours, and “so… when?”.</p>
+          <ul class="list">
+            <li><span class="dot"></span><span>Micro-commitments that feel great (no legal ties).</span></li>
+            <li><span class="dot"></span><span>When to gift a trip vs. jewelry.</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>B.I.M.B.O.™ Framework</h3>
+          <p><b>B</b>oundaries, <b>I</b>ntimacy, <b>M</b>utual Vision, <b>B</b>ehavior Rules, <b>O</b>ptions Window.<br><span class="note">A tongue-in-cheek acronym for serious results.</span></p>
+        </div>
+        <div class="card">
+          <h3>Bitcoin Time Preference Module</h3>
+          <p>Build a low-time-preference relationship: invest, grow, decide later. Includes “Satoshis not ceremonies” budgeting sheet.</p>
+        </div>
+        <div class="card">
+          <h3>Hustle Without the Cult</h3>
+          <p>Self-development habits inspired by the good parts of Andrew Tate’s discipline (minus the cringe). Execute daily, lead gently.</p>
+        </div>
+        <div class="card">
+          <h3>Conflict to Connection</h3>
+          <p>12-minute weekly ritual. Rules of engagement. No shouting, no ultimatums, no sleeping angry.</p>
+        </div>
+      </div>
+      <div style="margin-top:16px" class="guarantee">
+        <b>Engagement-Dodging Guarantee:</b> If you apply the scripts and she still forces a ring conversation within 21 days, I’ll coach you 1:1 until peace returns — or I refund you in <i class="count">21,000</i> satoshis. <span class="note">(Satire money. Chill.)</span>
       </div>
     </section>
 
-    <!-- SOCIAL PROOF -->
-    <section class="section" id="proof">
-      <h2>Field Results</h2>
-      <div class="cards">
-        <div class="card"><p>“Thought ring was mandatory. Now we do Roadmap Mondays. She loves it. I sleep like a baby.”<br><span class="muted">— Max, 29, PM & HODLer</span></p></div>
-        <div class="card"><p>“I was Team ‘Marry Now’. With Julian’s deal method I realized I wanted <b>security</b>, not paperwork.”<br><span class="muted">— A., 27, teacher</span></p></div>
-        <div class="card"><p>“My parents are traditional. We showed them our 12-month plan. Standing ovation at dinner.”<br><span class="muted">— Denis, 31, sales</span></p></div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section class="section" id="pricing">
-      <h2>Pricing</h2>
-      <div class="cards">
-        <div class="card"><h3>Starter — “Paper Hands”</h3><p>$0 — Mini-script “The Open” + 5 mistakes to stop tomorrow.</p></div>
-        <div class="card"><h3>Pro — “Diamond Hands”</h3><p>$297 — Full scripts, Timeline Matrix, Boundary Toolkit, 1× live Q&A.</p></div>
-        <div class="card"><h3>Presidential — “Art of the No-Deal”</h3><p>$1,997 — Everything in Pro + 1:1 (45 min), custom plan, voice notes, <b>Meet-the-In-Laws Battleplan</b>. <span class="muted">Only 7 spots/month.</span></p></div>
+    <!-- SOCIAL PROOF / ABSURD TESTIMONIALS -->
+    <section id="proof">
+      <h2 class="section-title">Results (Comically Real)</h2>
+      <div class="grid">
+        <div class="card testimonial">
+          <div class="avatar"></div>
+          <div>
+            <b>Artem, 29 — “We paused the ring, kept the romance.”</b>
+            <p>“Russian girlfriend. Heavy pressure. Julian’s frame + roadmap = peace. Weekly dates back, fights down.”</p>
+          </div>
+        </div>
+        <div class="card testimonial">
+          <div class="avatar"></div>
+          <div>
+            <b>Max, 31 — “Bitcoin over banquet halls.”</b>
+            <p>“We stacked sats instead of save-the-dates. She actually liked the growth plan. Wild.”</p>
+          </div>
+        </div>
+        <div class="card testimonial">
+          <div class="avatar"></div>
+          <div>
+            <b>“D.”, 27 — “From ultimatums to understanding.”</b>
+            <p>“Scripts worked. No manipulation, just clarity. We’re good.”</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section faq" id="faq">
-      <h2>FAQ</h2>
-      <details><summary>Is this manipulative?</summary><p>No. It’s <b>radical honesty</b> + clear agreements. Frame = leadership, not trickery.</p></details>
-      <details><summary>What if she insists on marrying now?</summary><p>The scripts force a <b>real decision</b>: aligned agreement or respectful split.</p></details>
-      <details><summary>Does it work in traditional families?</summary><p>Yes — use more structure and respect. There’s a module for culture/family pressure.</p></details>
-      <details><summary>Won’t she think I don’t love her?</summary><p>You show commitment differently: shared goals, exclusivity, plans. <b>Love = behavior</b>, not just documents.</p></details>
-      <details><summary>What if I later decide to marry?</summary><p>Switch to <b>Phase 2: Intelligent Commit</b> and use the Prenup Primer Light.</p></details>
-      <details><summary>Is this only for men?</summary><p>Principles are universal (frame, deals, clarity). Examples are tuned to men in hetero relationships but adapt easily.</p></details>
-      <details><summary>How fast are results?</summary><p>Often after the <b>first talk</b>: less pressure, more calm. Full stabilization in <b>2–6 weeks</b>.</p></details>
-    </section>
-
-    <!-- CTA -->
-    <section class="section cta" id="cta">
-      <h2>Lead the conversation, not the ring.</h2>
-      <p>Book your <b>No-Ring Call</b> — includes a mini audit and a ready-to-use script you can deploy <b>tonight</b>.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#">Book No-Ring Call</a>
-        <a class="btn btn-ghost" href="#">Get free “The Open” script</a>
+    <section id="faq">
+      <h2 class="section-title">FAQ</h2>
+      <div class="grid">
+        <div class="faq-item">
+          <b>Isn’t this manipulative?</b>
+          <p>No. It’s honest leadership + boundaries. You’re saying “I’m here, I’m serious, not rushing.” That reduces anxiety, not increases it.</p>
+        </div>
+        <div class="faq-item">
+          <b>Will this work with a very traditional family?</b>
+          <p>Yes. We use respect + roadmap. Parents calm down when they see a plan and your consistent actions.</p>
+        </div>
+        <div class="faq-item">
+          <b>Do I need to mention Andrew Tate or Trump?</b>
+          <p>Absolutely not. We borrow <i>discipline and negotiation</i> ideas, not the theatrics. Keep it classy.</p>
+        </div>
+        <div class="faq-item">
+          <b>What if she wants a ring now-now?</b>
+          <p>We deploy the “Options Window” and set a mutually agreed review date. If it’s still a mismatch then, you part respectfully.</p>
+        </div>
+        <div class="faq-item">
+          <b>Do you help women too?</b>
+          <p>This offer is for men. Principles are universal though: boundaries, vision, respect.</p>
+        </div>
+        <div class="faq-item">
+          <b>Is this Hustlers University?</b>
+          <p>No. This is smaller, calmer, saner — and it actually fixes your relationship.</p>
+        </div>
       </div>
-      <p class="muted" style="margin-top:8px">7 Presidential spots/month. If you’re serious, move now.</p>
     </section>
 
-    <footer>
-      <div>© <script>document.write(new Date().getFullYear())</script> No-Ring Blueprint™ — Made with Hustlers University energy.</div>
-      <div><a href="#faq">FAQ</a> · <a href="#pricing">Pricing</a> · <a href="#top">Back to top</a></div>
-    </footer>
+    <!-- FINAL CTA -->
+    <section id="cta" class="cta-final">
+      <div>
+        <h2 class="section-title">Ready to keep the love — without rushing the ring?</h2>
+        <p>Book the <b>7-Minute “No-Ring” Triage Call</b>. We’ll clarify your frame, your roadmap, and your next 3 steps.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:coach@julianmeinhardt.example?subject=No-Ring%20Call&body=Hey%20Julian%2C%20I%20want%20the%207-Min%20No-Ring%20Call.%20My%20situation%3A%20">Book Now</a>
+          <a class="btn" href="#hero">Back to Top</a>
+        </div>
+        <p class="note">No spam. No pressure. No diamond retailer affiliates.</p>
+      </div>
+      <div class="card">
+        <h3>What happens on the 7-Minute call?</h3>
+        <ul class="list">
+          <li><span class="dot"></span><span>Assess your current frame & pressure points.</span></li>
+          <li><span class="dot"></span><span>Pick a next-step script (you leave with words to use).</span></li>
+          <li><span class="dot"></span><span>Set a 30-day peace plan.</span></li>
+        </ul>
+        <div style="margin-top:10px" class="badge">Slots this week: <span class="count" id="slots">05</span></div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="foot">
+      <div>© <span id="yr"></span> Julian Meinhardt — Stay With Her. Don’t Marry Her.™</div>
+      <div class="note">Parody/entertainment. Not legal advice. If you are <b>literally Julian</b>: congrats, king. 🥂</div>
+    </div>
   </div>
+
+  <script>
+    // Tiny fun bits: dynamic year + playful slot countdown
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    (function(){
+      try{
+        const el = document.getElementById('slots');
+        const base = 8 + Math.floor(Math.random()*4); // 8-11
+        const today = new Date().getDate();
+        const pseudo = Math.max(2, base - (today % 6));
+        el.textContent = String(pseudo).padStart(2,'0');
+      }catch(e){}
+    })();
+  </script>
 </body>
 </html>
